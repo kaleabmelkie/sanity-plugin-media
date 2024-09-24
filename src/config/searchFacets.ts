@@ -15,7 +15,7 @@ export const inputs: Record<SearchFacetName, SearchFacetInputProps> = {
     name: 'altText',
     operatorType: 'empty',
     operatorTypes: ['empty', 'notEmpty', null, 'includes', 'doesNotInclude'],
-    title: 'Alt text',
+    title: 'Alt Text',
     type: 'string',
     value: ''
   },
@@ -25,7 +25,7 @@ export const inputs: Record<SearchFacetName, SearchFacetInputProps> = {
     name: 'creditLine',
     operatorType: 'empty',
     operatorTypes: ['empty', 'notEmpty', null, 'includes', 'doesNotInclude'],
-    title: 'Credit',
+    title: 'Credit Text',
     type: 'string',
     value: ''
   },
@@ -35,7 +35,7 @@ export const inputs: Record<SearchFacetName, SearchFacetInputProps> = {
     name: 'description',
     operatorType: 'empty',
     operatorTypes: ['empty', 'notEmpty', null, 'includes', 'doesNotInclude'],
-    title: 'Description',
+    title: 'Copyright Notice',
     type: 'string',
     value: ''
   },
@@ -199,7 +199,7 @@ export const inputs: Record<SearchFacetName, SearchFacetInputProps> = {
     name: 'title',
     operatorType: 'empty',
     operatorTypes: ['empty', 'notEmpty', null, 'includes', 'doesNotInclude'],
-    title: 'Title',
+    title: 'License URL',
     type: 'string',
     value: ''
   },

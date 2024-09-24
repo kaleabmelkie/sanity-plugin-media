@@ -24,7 +24,6 @@ import DocumentList from '../DocumentList'
 import FileAssetPreview from '../FileAssetPreview'
 import FormFieldInputTags from '../FormFieldInputTags'
 import FormFieldInputText from '../FormFieldInputText'
-import FormFieldInputTextarea from '../FormFieldInputTextarea'
 import FormSubmitButton from '../FormSubmitButton'
 import Image from '../Image'
 import {useToolOptions} from '../../contexts/ToolOptionsContext'
@@ -319,15 +318,6 @@ const DialogAssetEdit = (props: Props) => {
                           name="originalFilename"
                           value={currentAsset?.originalFilename}
                         />
-                        {/* Title */}
-                        <FormFieldInputText
-                          {...register('title')}
-                          disabled={formUpdating}
-                          error={errors?.title?.message}
-                          label="Title"
-                          name="title"
-                          value={currentAsset?.title}
-                        />
                         {/* Alt text */}
                         <FormFieldInputText
                           {...register('altText')}
@@ -337,22 +327,30 @@ const DialogAssetEdit = (props: Props) => {
                           name="altText"
                           value={currentAsset?.altText}
                         />
-                        {/* Description */}
-                        <FormFieldInputTextarea
+                        {/* License URL (formerly Title) */}
+                        <FormFieldInputText
+                          {...register('title')}
+                          disabled={formUpdating}
+                          error={errors?.title?.message}
+                          label="License URL"
+                          name="title"
+                          value={currentAsset?.title}
+                        />
+                        {/* Copyright Notice (formerly Description) */}
+                        <FormFieldInputText
                           {...register('description')}
                           disabled={formUpdating}
                           error={errors?.description?.message}
-                          label="Description"
+                          label="Copyright Notice"
                           name="description"
-                          rows={5}
                           value={currentAsset?.description}
                         />
-                        {/* CreditLine */}
+                        {/* Credit Text (formerly CreditLine) */}
                         {creditLine?.enabled && (
                           <FormFieldInputText
                             {...register('creditLine')}
                             error={errors?.creditLine?.message}
-                            label="Credit"
+                            label="Credit Text"
                             name="creditLine"
                             value={currentAsset?.creditLine}
                             disabled={
